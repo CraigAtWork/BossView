@@ -15,19 +15,19 @@
 
     // Set up BossView appropriately for the environment. Start with AMD.
     if (typeof define === 'function' && define.amd) {
-      console.log("loading BossViewMixin AMD");
+      //console.log("loading BossViewMixin AMD");
       define(['underscore', 'backbone', 'marionette', 'exports'], factory);
     }
 
     // Next for Node.js or CommonJS.
     else if (typeof exports === 'object') {
-      console.log("loading BossViewMixin CommonJS");
+      //console.log("loading BossViewMixin CommonJS");
       factory(require('underscore'), require('backbone'), require('marionette'), exports);
     }
 
     // Finally, as a browser global.
     else {
-      console.log("loading BossViewMixin browser global");
+      //console.log("loading BossViewMixin browser global");
       factory(_, Backbone, Marionette, {});
     }
 
